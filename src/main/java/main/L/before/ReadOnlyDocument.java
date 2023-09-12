@@ -3,10 +3,15 @@ package main.L.before;
 /**
  * ReadOnlyDocument
  */
-public class ReadOnlyDocument extends Document{
+public class ReadOnlyDocument extends Document {
 
     @Override
-    public void save() throws Exception {
-        throw new Exception("Cant' save read-only document.");
+    public void save() {
+        try {
+            throw new Exception("Can't save a read-only document");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
+
 }

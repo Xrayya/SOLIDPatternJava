@@ -1,8 +1,7 @@
-package main.L.before;
+package main.L.after;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileWriter;
 import java.io.InputStream;
 
 /**
@@ -40,16 +39,6 @@ public class Document {
             in.close();
         } catch (Exception e) {
             this.data = null;
-        }
-    }
-
-    public void save() {
-        try {
-            FileWriter myWriter = new FileWriter(fullPathFileName);
-            myWriter.write(data);
-            myWriter.close();
-        } catch (Exception e) {
-            e.printStackTrace();
         }
     }
 }
